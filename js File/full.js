@@ -22,9 +22,10 @@ document.getElementById('history-button').addEventListener('click', function () 
 const historyContainer = document.getElementById('history-container')
 // first donation card work start here
 document.getElementById('card-btn-1').addEventListener('click', function () {
+    document.getElementById('p-for-history').classList.add('hidden')
     const cardBalance = convertparsetotext('card-balance');
     const donationInput1 = convertparsetoInput('donation-input-1');
-    if(cardBalance <= donationInput1 || donationInput1 < 0 ){
+    if (cardBalance <= donationInput1 || donationInput1 < 0) {
         alert('you are failed to donated');
         return;
     }
@@ -37,8 +38,8 @@ document.getElementById('card-btn-1').addEventListener('click', function () {
     const div1 = document.createElement('div');
     div1.innerHTML = `
     <div class="border border-black p-8 rounded-2xl">
-            <h4 class="text-xl font-bold">${donationInput1} Donate for Flood at Noakhali, Bangladesh</h4>
-            <p class="text-[18px] font-semibold ">${new Date}</p>
+            <h4 class="text-xl font-bold"><b>Donate taka:</b> ${donationInput1} Donate for Flood at Noakhali, Bangladesh</h4>
+            <p class="text-[18px] font-semibold "><b>time:</b> ${new Date}</p>
     </div>
     `
     historyContainer.appendChild(div1);
@@ -47,9 +48,10 @@ document.getElementById('card-btn-1').addEventListener('click', function () {
 // first donation card work end here
 // second donation card work start here
 document.getElementById('card-btn-2').addEventListener('click', function () {
+    document.getElementById('p-for-history').classList.add('hidden')
     const cardBalance = convertparsetotext('card-balance');
     const donationInput2 = convertparsetoInput('donation-input-2');
-    if(cardBalance <= donationInput2 || donationInput2 < 0){
+    if (cardBalance <= donationInput2 || donationInput2 < 0) {
         alert('you are failed to donated');
         return;
     }
@@ -61,8 +63,8 @@ document.getElementById('card-btn-2').addEventListener('click', function () {
     const div2 = document.createElement('div');
     div2.innerHTML = `
     <div class="border border-black p-8 rounded-2xl">
-            <h4 class="text-xl font-bold">${donationInput2} Donate for Flood Relief in Feni,Bangladesh</h4>
-            <p class="text-[18px] font-semibold ">${new Date}</p>
+            <h4 class="text-xl font-bold"><b>Donate taka:</b> ${donationInput2} Donate for Flood Relief in Feni,Bangladesh</h4>
+            <p class="text-[18px] font-semibold "><b>time:</b> ${new Date}</p>
     </div>
     `
     historyContainer.appendChild(div2);
@@ -71,9 +73,10 @@ document.getElementById('card-btn-2').addEventListener('click', function () {
 // second donation card work end here
 // third donation card work start here
 document.getElementById('card-btn-3').addEventListener('click', function () {
+    document.getElementById('p-for-history').classList.add('hidden')
     const cardBalance = convertparsetotext('card-balance');
     const donationInput3 = convertparsetoInput('donation-input-3');
-    if(cardBalance <= donationInput3 || donationInput3 < 0){
+    if (cardBalance <= donationInput3 || donationInput3 < 0) {
         alert('you are failed to donated');
         return;
     }
@@ -85,11 +88,23 @@ document.getElementById('card-btn-3').addEventListener('click', function () {
     const div3 = document.createElement('div');
     div3.innerHTML = `
     <div class="border border-black p-8 rounded-2xl">
-            <h4 class="text-xl font-bold">${donationInput3} Aid for Injured in the Quota Movement</h4>
-            <p class="text-[18px] font-semibold ">${new Date}</p>
+            <h4 class="text-xl font-bold"><b>Donate taka:</b> ${donationInput3} Aid for Injured in the Quota Movement</h4>
+            <p class="text-[18px] font-semibold "><b>time:</b> ${new Date}</p>
     </div>
     `
     historyContainer.appendChild(div3);
     my_modal_1.showModal()
 })
 // third donation card work end here
+
+document.getElementById('extra-button').addEventListener('click', function () {
+    console.log('is');
+
+    
+        document.getElementById('donation-container').classList.remove('hidden');
+        document.getElementById('history-container').classList.add('hidden');
+        document.getElementById('donation-button').classList.add('btn-primary');
+        document.getElementById('history-button').classList.remove('btn-primary');
+    
+    document.getElementById('donation-input-1').focus();
+})
