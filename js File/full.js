@@ -43,7 +43,10 @@ document.getElementById('card-btn-1').addEventListener('click', function () {
     </div>
     `
     historyContainer.appendChild(div1);
-    my_modal_1.showModal()
+    my_modal_1.showModal();
+    document.getElementById('coin').innerHTML = `
+     <img class="" src="./assets/coin.png" alt=""> ${donationInput1}
+    `
 })
 // first donation card work end here
 // second donation card work start here
