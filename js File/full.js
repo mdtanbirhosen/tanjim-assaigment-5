@@ -71,7 +71,10 @@ document.getElementById('card-btn-2').addEventListener('click', function () {
     </div>
     `
     historyContainer.appendChild(div2);
-    my_modal_1.showModal()
+    my_modal_1.showModal();
+    document.getElementById('coin').innerHTML = `
+    <img class="" src="./assets/coin.png" alt=""> ${donationInput2}
+   `
 })
 // second donation card work end here
 // third donation card work start here
@@ -96,7 +99,10 @@ document.getElementById('card-btn-3').addEventListener('click', function () {
     </div>
     `
     historyContainer.appendChild(div3);
-    my_modal_1.showModal()
+    my_modal_1.showModal();
+    document.getElementById('coin').innerHTML = `
+    <img class="" src="./assets/coin.png" alt=""> ${donationInput3}
+   `
 })
 // third donation card work end here
 
